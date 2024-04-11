@@ -2,7 +2,6 @@ package com.campuslands.ong.dto;
 
 import java.sql.Date;
 
-import org.hibernate.mapping.List;
 
 import com.fasterxml.jackson.annotation.JsonView;
 
