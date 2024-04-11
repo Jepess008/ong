@@ -56,6 +56,7 @@ public class EnvioSedeServiceImpl implements EnvioSedeService {
             EnvioSedeEntity envioSedeEntity= converter.convertEnvioSede(envio_x_sede);
             envioSedeEntity.setEnvio(envioOptional.get());
             envioSedeEntity.setSede(sedeOptional.get());
+            repositoryEnvioSede.save(envioSedeEntity);
             return converter.convertEnvioSedeDTO(envioSedeEntity);
         }
 

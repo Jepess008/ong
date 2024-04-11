@@ -50,6 +50,7 @@ public class EnvioServiceImpl implements EnvioService {
         if(refugioOptional.isPresent()){
             EnvioEntity enveioEntity= converter.convertEnvio(envio);
             enveioEntity.setRefugio(refugioOptional.get());
+            repositoryEnvio.save(enveioEntity);
             return converter.convertEnvioDTO(enveioEntity);
         }
         return null;

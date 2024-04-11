@@ -56,6 +56,7 @@ public class VoluntarioServiceImpl implements VoluntarioService{
             voluntarioEntity.setPersona(personaOptional.get());
             voluntarioEntity.setSede(sedeOptional.get());
             voluntarioEntity.setProfesion(profesionOptional.get());
+            repositoryVoluntario.save(voluntarioEntity);
             return converter.convertVoluntarioDTO(voluntarioEntity);
         }else{
             return null;

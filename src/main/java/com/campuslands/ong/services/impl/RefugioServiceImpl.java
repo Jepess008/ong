@@ -51,6 +51,7 @@ public class RefugioServiceImpl implements RefugioService {
         if(ciudadOptional.isPresent()){
             RefugioEntity refugioEntity= converter.convertRefugio(refugio);
             refugioEntity.setCiudad(ciudadOptional.get());
+            repositoryRefugio.save(refugioEntity);
             return converter.convertRefugioDTO(refugioEntity);
         }
 
